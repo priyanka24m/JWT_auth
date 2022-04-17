@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "df6228fc-f642-42f3-a8e8-22cd6f9cbbd1",
+		"name": "user authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUwMTkyOTIyLCJpYXQiOjE2NTAxOTA4OTksImp0aSI6IjJiZDQ1YTk2NjljMTQ3OWI4MmFkZTg0ZGY0OTM3ZmVkIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJhZG1pbiJ9.jrYI6__31vGhyytxnI88PIfq5geT3y0Dmi-0CeFdUSA",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "adminuser10",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "adminuser10",
+							"type": "text"
+						},
+						{
+							"key": "is_active",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/register/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1MDI3NzI5OSwiaWF0IjoxNjUwMTkwODk5LCJqdGkiOiJiYzJhYjQ4NzQ5OWI0ZTUzOTY0NzgyMDgyZDBhODU1NyIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.-cZlVSpby9evUk5riHljJ0ilnxLff5DnA0FABgMNXWI",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "adminuser10",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "adminuser10",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user_data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUwMTk1NTgwLCJpYXQiOjE2NTAxOTUyODAsImp0aSI6ImQyMmYxNmNmZmEwOTQ5NThiNzZhMjgxZmZhYmQ0OWYxIiwidXNlcl9pZCI6MTF9.h79eMtnZaUyy2GVzQxhHgGzuJp1vatmJkFW43dR9Dg8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "regenerate_access_token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b3db381dae3471be8269b8a86ef2afe6b80aefa1",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "adminuser1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "adminuser1",
+							"type": "text",
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/user/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
