@@ -13,7 +13,9 @@
 #
 ##### ii. Run -- python manage.py runserver
 #
-##### iii. Check in postman with ---
+##### iii. For instance create user with - python manage.py createsuperuser, give username and password - admin
+#
+##### iiii. Check in postman with ---
 #
 ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. URL -- localhost:8000/register/
 ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Request Method -- POST
